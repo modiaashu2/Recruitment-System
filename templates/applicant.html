@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div>
+    <br />
+    {{ stri }}
+    <br />
+    {% if status != 'AC' %}
+    {{ status }}
+    <br />
+    {% else %}
+    You are selected.. Reporting from next month at Bengaluru Site.
+    <a href = "/acceptapp/{{ A_ID }}"><button type = "submit">Accept Offer</Button></a>
+    <a href = "/rejectapp/{{ A_ID }}"><button type = "submit">Reject Offer</Button></a>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1061,9 +1061,7 @@ h3.agile_heading.two {
 
 input[type="file"] {
 	padding: 8px 5px;
-	opacity: 0;
 	cursor: pointer;
-	position: absolute;
 	left: 34.2%;
 	width: 260px;
 }

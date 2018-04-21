@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+<div id = 'a'>
+       <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Accept</th>
+              <th scope="col">Cancel</th>
+              <th scope="col">Resume</th>
+            </tr>
+          </thead>
+          <tbody>
+                {% for rec in records %}
+                <tr>
+                        <td> {% print rec[0] %} </td>
+                        <td>Name : {% print rec[7] %} </td>
+                        <td>
+                            {% if rec[5] == "New" %}
+                            <a href = "/accept/{{ rec[0] }}/{{ 's1' }}"><button type = "submit"> Proceed to HR Manager
+                                        </button></a>
+                            {% else %}
+                            <button type = "submit" disabled>Accepted at this stage</button>
+                            {% endif %}
+                        </td><td>
+                            {% if rec[5] != "Rejected" %}
+                            <a href = "/reject/{{ rec[0] }}"><button type = "submit"> Remove Candidate </button> </a>
+                            {% else %}
+                            <button type = "submit" disabled>Rejected</button>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href = "/viewpdf/{{ rec[2] }}">View Resume Pdf</a>
+                        </td>
+                </tr>
+                {% endfor %}
+          </tbody>
+        </table>
+</div>
+{% endblock %}

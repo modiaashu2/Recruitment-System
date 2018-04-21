@@ -1,0 +1,172 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Soft a Human Resource Management Category Bootstrap Responsive Web Template | Register :: w3layouts</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Soft Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--//tags -->
+	<link href="{{ url_for('static',filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+
+	<link href="{{ url_for('static', filename = 'css/font-awesome.css') }}" rel="stylesheet">
+	<!-- //for bootstrap working -->
+	<link href="//fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+	    rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header" id="home">
+		<div class="content white agile-info">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+						<a class="navbar-brand" href="index.html">
+							<h1><span class="fa fa-signal" aria-hidden="true"></span> Soft <label>Hr Agency</label></h1>
+						</a>
+					</div>
+					<!--/.navbar-header-->
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-2" id="link-effect-2">
+							<ul class="nav navbar-nav">
+								<li><a href="/" class="effect-3">Home</a></li>
+
+								<li><a href="{{ url_for('apply') }}" class="effect-3">Apply</a></li>
+
+								{% if session['username'] != null or session['A_ID'] != null %}
+								<li><a href = "{{ url_for('logout') }}" class="effect-3" >Log-out</a></li>
+								{% else %}
+								<li><a href = "{{ url_for('login') }}" class = "effect-3"> Login </a></li>
+								{% endif %}
+							</ul>
+						</nav>
+					</div>
+					<!--/.navbar-collapse-->
+					<!--/.navbar-->
+				</div>
+			</nav>
+		</div>
+	</div>
+
+
+    {% block body %} {% endblock %}
+	<div class="footer_top_agileits">
+	    <div class="container">
+	        <div class="col-md-4 footer_grid">
+	            <h3>About Us</h3>
+	            <p>The project is based on HR Management system.
+	            </p>
+	        </div>
+	        <div class="col-md-4 footer_grid">
+	            <h3>Latest News</h3>
+	            <ul class="footer_grid_list">
+	                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+	                    <a href="single.html">Lorem ipsum neque vulputate </a>
+	                </li>
+	                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+	                    <a href="single.html">Dolor amet sed quam vitae</a>
+	                </li>
+	                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+	                    <a href="single.html">Lorem ipsum neque, vulputate </a>
+	                </li>
+	                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+	                    <a href="single.html">Dolor amet sed quam vitae</a>
+	                </li>
+	                <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+	                    <a href="single.html">Lorem ipsum neque, vulputate </a>
+	                </li>
+	            </ul>
+	        </div>
+	        <div class="col-md-4 footer_grid">
+	            <h3>Contact Info</h3>
+	            <ul class="address">
+	                <li><i class="fa fa-map-marker" aria-hidden="true"></i>BH4, IIIT Allahabad <span>Allahabad, UP</span></li>
+	                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:hr_iiita@iiita.ac.in">hr_iiita@iiita.ac.in</a></li>
+	                <li><i class="fa fa-phone" aria-hidden="true"></i>+91 9902920219</li>
+	            </ul>
+	        </div>
+	        <div class="clearfix"> </div>
+	    </div>
+	</div>
+	<div class="footer_w3ls">
+	    <div class="container">
+	        <div class="footer_bottom">
+	            <div class="col-md-9 footer_bottom_grid">
+	                <div class="footer_bottom1">
+	                    <a href="index.html">
+	                        <h2><span class="fa fa-signal" aria-hidden="true"></span> Soft <label>Hr Agency</label></h2>
+	                    </a>
+	                    <p>© 2017 Soft. All rights reserved</p>
+	                </div>
+	            </div>
+	            <div class="col-md-3 footer_bottom_grid">
+	                <h6>Follow Us</h6>
+	                <div class="social">
+	                    <ul>
+	                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+	                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+	                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	            <div class="clearfix"> </div>
+	        </div>
+
+	    </div>
+	</div>
+
+    <!-- //footer -->
+
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- password-script -->
+	<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>
